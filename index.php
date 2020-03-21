@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            echo 'Hello';
+            echo 'Hello world';
         ?>
     </body>
 </html>
