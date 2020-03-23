@@ -45,5 +45,17 @@ class connectdb {
             header("location:index.php");
         }
     }
+    
+    public function register($User,$Pass,$name,$phone,$address)
+    {
+        $sql = "INSERT INTO `user`(`user_username`, `user_pass`, `user_name`, `user_tel`,'user_adress','user_status') VALUES ('" . $User . "','" . $Pass . "','" . $name . "','" . $phone . "','" . $address . "','Member')";
+        if (mysqli_query($this->condb(), $sql)) {
+            echo 'Register OK';
+            //header("location:login.php");
+        } else {
+            echo "Connet F<br>";
+            echo $sql;
+        }
+    }
 
 }

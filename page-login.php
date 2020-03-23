@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <form action='sentlogin.php' method='POST' name="formjs">
+        <form action='send-login.php' method='POST' name="formjs">
             <span>
                 Editty Company
             </span>
