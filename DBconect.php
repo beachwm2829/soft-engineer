@@ -19,10 +19,6 @@ class connectdb {
         $result = mysqli_query($this->condb(), $sql);
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            //$_SESSION["id"] = $user;
-            //$_SESSION["pass"] = $pass;
-            //$_SESSION["mid"] = $row["mid"];
-            //$_SESSION["point"] = $row["mPoint"];
             $p = $row['user_status'];
 
             if ($p == 'Member') {
@@ -48,7 +44,7 @@ class connectdb {
     
     public function register($User,$Pass,$name,$phone,$address)
     {
-        $sql = "INSERT INTO `user`(`user_username`, `user_pass`, `user_name`, `user_tel`,'user_adress','user_status') VALUES ('" . $User . "','" . $Pass . "','" . $name . "','" . $phone . "','" . $address . "','Member')";
+        $sql = "INSERT INTO `user`(`user_username`, `user_pass`, `user_name`, `user_tel`, `user_address`, `user_status`) VALUES ('" . $User . "','" . $Pass . "','" . $name . "','" . $phone . "','" . $address . "','Member')";
         if (mysqli_query($this->condb(), $sql)) {
             echo 'Register OK';
             //header("location:login.php");
