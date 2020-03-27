@@ -17,11 +17,11 @@
   <body>
     <div class="container">
       <div class="row">
-        <?php include('navbar.php');?>
+        <?php include('./navbar/navbar.php');?>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <?php include('banner.php');?>
+          <?php include('./navbar/banner.php');?>
         </div>
       </div>
     </div>
